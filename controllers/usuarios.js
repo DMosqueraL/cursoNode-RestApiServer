@@ -4,7 +4,7 @@ import bcryptjs from "bcryptjs";
 import Usuario from "../models/usuario.js";
 
 const usuariosGet = async (req = request, res = response) => {
-  const { limite = 5, desde = 0 } = req.query;
+  const { limite, desde } = req.query;
   const query = { estado: true };
 
   // const usuarios = await Usuario.find(query)
